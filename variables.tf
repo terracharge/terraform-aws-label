@@ -1,3 +1,8 @@
+variable "attributes" {
+  type        = list(string)
+  default     = []
+  description = "Additional attributes (e.g. `public`)"
+}
 variable "context" {
   type = object({
     organization = string
@@ -6,5 +11,5 @@ variable "context" {
     product      = string
     tags         = map(string)
   })
-  description = "Default context for naming purpose etc."
+  description = "Default environmental context"
 }
